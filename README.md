@@ -29,7 +29,7 @@ expert/
 │   └── management/      # Management commands
 ├── Course/              # Course management
 ├── Enroll/              # Enrollment handling
-└── .env                 # Environment variables (not in git)
+
 ```
 
 ## Installation
@@ -51,19 +51,15 @@ expert/
    pip install django djangorestframework redis celery django-celery-beat django-celery-results djangorestframework-simplejwt
    ```
 
-4. **Environment setup:**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your email credentials
-   ```
 
-5. **Database setup:**
+
+4. **Database setup:**
    ```bash
    python manage.py migrate
    python manage.py createsuperuser
    ```
 
-6. **Setup Celery tasks:**
+5. **Setup Celery tasks:**
    ```bash
    python manage.py setup_celery_tasks
    ```
@@ -75,10 +71,7 @@ expert/
    python manage.py runserver
    ```
 
-2. **Start Redis server:**
-   ```bash
-   redis-server
-   ```
+
 
 3. **Start Celery worker:**
    ```bash
